@@ -1,4 +1,4 @@
-package ss1_modue2;
+package ss1_module2;
 
 import java.util.Scanner;
 
