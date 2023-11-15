@@ -9,7 +9,7 @@ public class Main {
         fan1.setColor("yellow");
         fan1.setOn(true);
         Fan fan2 =new Fan();
-        fan2.setSpeed(Fan.Medium);
+        fan2.setSpeed(Fan.MEDIUM);
         fan2.setRadius(5);
         fan2.setColor("blue");
         fan2.setOn(false);

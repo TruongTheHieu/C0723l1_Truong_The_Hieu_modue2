@@ -2,7 +2,7 @@ package ss4_module2.xay_dung_lop_fan;
 
 public class Fan {
      public final static int SLOW = 1;
-     public final static int Medium = 2;
+     public final static int MEDIUM = 2;
      public final  static int FAST = 3;
 
      private int speed = SLOW;

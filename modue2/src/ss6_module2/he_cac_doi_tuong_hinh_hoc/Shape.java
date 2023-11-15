@@ -1,8 +1,8 @@
 package ss6_module2.he_cac_doi_tuong_hinh_hoc;
 
 public class Shape {
-public  String color;
-public  boolean filled ;
+    private String color = "green";
+    private boolean filled = true;
 
     public Shape() {
     }
@@ -27,11 +27,12 @@ public  boolean filled ;
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+
     @Override
     public String toString() {
-        if (filled){
-            return "A Shape with color of"+this.color+" and filled";
-        }
-        return "A Shape with color of"+this.color+" and not filled";
+        return "A Shape with color of "
+                + getColor()
+                + " and "
+                + (isFilled() ? "filled" : "not filled");
     }
 }
