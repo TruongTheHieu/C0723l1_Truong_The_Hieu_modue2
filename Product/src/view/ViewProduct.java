@@ -3,6 +3,7 @@ package view;
 import controller.ProductController;
 import model.Product;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class ViewProduct {
@@ -45,30 +46,29 @@ public class ViewProduct {
             }
         } while (flag);
     }
+
     public static void disPlay() {
-        Product[] products = productController.getAll();
-        for (int i = 0; i < products.length; i++) {
-            if (products[i] != null) {
-                System.out.println(products[i]);
-            }
+        ArrayList<Product> products = productController.getAll();
+        for (int i = 0; i < products.size(); i++) {
+                System.out.println(products.get(i));
         }
     }
 
-    public  static Product inputProduct(){
+    public static Product inputProduct() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập Id :");
-        int id = Integer.parseInt(scanner.nextLine()) ;
+        int id = Integer.parseInt(scanner.nextLine());
         System.out.println("Nhập Tên : ");
         String name = scanner.nextLine();
         System.out.println("Nhập Gía :");
-        double price  = Double.parseDouble(scanner.nextLine());
+        double price = Double.parseDouble(scanner.nextLine());
         System.out.println("Nhập mô tả :");
         String describe = scanner.nextLine();
-        Product product = new Product(id,name,price,describe);
+        Product product = new Product(id, name, price, describe);
         return product;
     }
 
-    public static void delete(){
+    public static void delete() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập Id cần xóa : ");
         int deleteId = Integer.parseInt(scanner.nextLine());
@@ -76,19 +76,19 @@ public class ViewProduct {
 
     }
 
-    public static void edit(){
+    public static void edit() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Nhập id cần sửa :");
         int editId = Integer.parseInt(scanner.nextLine());
         System.out.println("Mời bạn thông tin đối tượng cần sửa");
         Product product = inputProduct();
-        productController.edit(editId,product);
+        productController.edit(editId, product);
     }
-    public static void search(){
+
+    public static void search() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("nhập Id cần tìm");
         int searchId = Integer.parseInt(scanner.nextLine());
-        int  [] Id ;
         productController.search(searchId);
     }
 }

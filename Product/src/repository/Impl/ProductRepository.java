@@ -3,36 +3,32 @@ package repository.Impl;
 import model.Product;
 import repository.IProductRepository;
 
+import java.util.ArrayList;
+
 public class ProductRepository implements IProductRepository {
-    private static Product[] productList = new Product[5];
+    private static ArrayList<Product> productList = new ArrayList<>();
+
     static {
-        productList[0] = new Product(1,"HIEU",1000,"OK");
-        productList[1] = new Product(2,"Hung",2000,"OK");
-        productList[2] = new Product(3,"Chanh",3000,"OK");
+        productList.add(new Product(1, "HIEU", 1000, "OK"));
+        productList.add(new Product(2, "Hung", 2000, "OK"));
+        productList.add(new Product(3, "Chanh", 3000, "OK"));
     }
+
     @Override
-    public Product[] getAll() {
+    public ArrayList<Product> getAll() {
         return productList;
     }
 
     @Override
     public void add(Product product) {
-        for (int i = 0; i <productList.length ; i++) {
-            if(productList[i] == null){
-                productList[i] = product;
-                break;
-            }
-
-        }
-
-
+        productList.add(product);
     }
 
     @Override
     public void delete(int deleteId) {
-        for (int i = 0; i <productList.length; i++){
-            if(deleteId == productList[i].getId()){
-                productList[i] = null;
+        for (int i = 0; i < productList.size(); i++) {
+            if (deleteId == productList.get(i).getId()) {
+                productList.remove(i);
                 break;
             }
         }
@@ -40,10 +36,10 @@ public class ProductRepository implements IProductRepository {
     }
 
     @Override
-    public void edit( int editId , Product product) {
-        for (int i = 0; i < productList.length ; i++) {
-            if(editId == productList[i].getId()){
-                productList[i] = product;
+    public void edit(int editId, Product product) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (editId == productList.get(i).getId()) {
+                productList.set(editId, product);
                 break;
             }
         }
@@ -52,9 +48,10 @@ public class ProductRepository implements IProductRepository {
 
     @Override
     public void search(int searchId) {
-        for (int i = 0; i < productList.length; i++) {
-            if(searchId == productList[i].getId()){
-                System.out.println(productList[i]);
+        for (int i = 0; i < productList.size(); i++) {
+            if (searchId == productList.get(i).getId()) {
+                System.out.println(productList.get(i));
+                break;
             }
         }
 

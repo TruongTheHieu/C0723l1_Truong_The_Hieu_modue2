@@ -4,10 +4,13 @@ import model.Product;
 import repository.Impl.ProductRepository;
 import service.IProductService;
 
+import java.util.ArrayList;
+
 public class ProductService implements IProductService {
     private static ProductRepository productRepository = new ProductRepository();
+
     @Override
-    public Product[] getAll() {
+    public ArrayList<Product> getAll() {
         return productRepository.getAll();
     }
 
@@ -18,14 +21,14 @@ public class ProductService implements IProductService {
     }
 
     @Override
-    public void  delete(int deleteId) {
+    public void delete(int deleteId) {
         productRepository.delete(deleteId);
 
     }
 
     @Override
-    public void edit(int editId,Product product) {
-        productRepository.edit(editId,product);
+    public void edit(int editId, Product product) {
+        productRepository.edit(editId, product);
 
     }
 

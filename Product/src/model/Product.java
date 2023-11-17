@@ -2,9 +2,9 @@ package model;
 
 public class Product {
     private int id;
-    private  String name;
+    private String name;
     private double price;
-    private String  describe;
+    private String describe;
 
     public Product(int id, String name, double price, String describe) {
         this.id = id;
