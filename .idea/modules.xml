@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/C0723l1_Truong_The_Hieu_module2.iml" filepath="$PROJECT_DIR$/.idea/C0723l1_Truong_The_Hieu_module2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Product/Product.iml" filepath="$PROJECT_DIR$/Product/Product.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modue2/apj-shape/apj-shape.iml" filepath="$PROJECT_DIR$/modue2/apj-shape/apj-shape.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modue2/src/modue2.iml" filepath="$PROJECT_DIR$/modue2/src/modue2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/modue2/modue21.iml" filepath="$PROJECT_DIR$/modue2/modue21.iml" />
+    </modules>
+  </component>
+</project>
