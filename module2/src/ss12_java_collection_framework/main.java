@@ -7,8 +7,8 @@ public class main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Product> listProduct = new ArrayList<>();
-        ProductManager productManager = new ProductManager(listProduct);
+//        ArrayList<Product> listProduct = new ArrayList<>();
+        ProductManager productManager = new ProductManager();
 
         boolean flag = true;
         do {
@@ -43,11 +43,24 @@ public class main {
                     productManager.search(productSearch);
                     break;
                 case 6:// Sắp xếp tăng dần, giảm dần theo giá.
+                    System.out.println("bạn muốn sắp xếp tăng hay giảm");
+                    System.out.println("\n1 : tăng " +
+                            "\n2 : giảm");
+                    int temp = Integer.parseInt(sc.nextLine());
+                    switch (temp) {
+                        case 1: // tăng
+                            productManager.sortTheoGiaSanPham(false);
+                            break;
+                        case 2:// giảm
+                            productManager.sortTheoGiaSanPham(true);
+                            break;
 
+                    }
+                    break;
                 default: {
                     flag = false;
                 }
             }
-        }while (flag) ;
+        } while (flag);
     }
 }

@@ -15,7 +15,6 @@ public class ServiceDoctor implements IServiceDoctor {
     @Override
     public void add(Doctor doctor) {
          repositoryDoctor.add(doctor);
-
     }
 
     @Override

@@ -1,16 +1,21 @@
 package ss12_java_collection_framework;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class ProductManager {
 
     private static ArrayList<Product> listProduct = new ArrayList<>();
-//    static {
-//        listProduct.add(new Product(1,"hieu",100));
-//        listProduct.add(new Product(2,"tuan",200));
-//        listProduct.add(new Product(3,"hung",300));
-//    }
+    static {
+        listProduct.add(new Product(1,"hieu",100));
+        listProduct.add(new Product(2,"tuan",200));
+        listProduct.add(new Product(3,"hung",300));
+    }
+
+    public ProductManager() {
+
+    }
 
     public ProductManager(ArrayList<Product> listProduct) {
         this.listProduct = listProduct;
@@ -74,7 +79,7 @@ public class ProductManager {
 //            System.out.println(listProduct.get(i).toString());
 //        }
 
-        for (Product item: listProduct) {
+        for (Product item : listProduct) {
             System.out.println(item);
         }
     }
@@ -96,8 +101,21 @@ public class ProductManager {
             System.out.println("không tìm thấy Product");
         }
     }
-//    public void sort(){
-//
-//    }
+
+    public void sortTheoGiaSanPham(boolean reverse) {
+        if (!reverse) {
+            System.out.println("-------------săp xếp tăng dần theo giá------------");
+            listProduct.sort(new SapXepTangDan());
+        } else {
+            System.out.println("-------------săp xếp Giam dần theo giá------------");
+            listProduct.sort(new SapXepGiamDan());
+        }
+        for (Product item : listProduct
+        ) {
+            System.out.println(item);
+        }
+
+    }
 }
+
 
