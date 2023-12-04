@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module2/src/ss13_thuat_toan_tim_kiem/baitap/apj-find-maximum-subsequence" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module2/src/ss7_module2/apj-shape" vcs="Git" />
   </component>
 </project>
